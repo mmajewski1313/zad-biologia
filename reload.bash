@@ -26,5 +26,7 @@ php "${BASEDIR}/app/console" cache:warmup
 
 php "${BASEDIR}/app/console" doctrine:schema:update --force
 
+php app/console fos:user:create admin admin@example.net loremipsum --super-admin
+
 sudo chmod -R 0777 /app/symfony2app
 sudo chown -R "${WHOAMI}:${WHOAMI}" /app/symfony2app
