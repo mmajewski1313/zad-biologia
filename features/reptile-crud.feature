@@ -44,9 +44,9 @@ Feature: I would like to edit reptiles
     And I should not see "<old-reptile>"
 
   Examples:
-    | old-reptile     | new-reptile       | new-age    |
-    | viper           | NEWVIPER          | 9876       |
-    | turtle          | TURTLETURTLE      | 3333       |
+    | old-reptile     | new-reptile  | new-age    |
+    | viper           | N-E-W-V-I-P       | 9876       |
+    | turtle          | T-U-R-T-U-R       | 3333       |
 
 
   Scenario Outline: Delete records
@@ -65,6 +65,6 @@ Feature: I would like to edit reptiles
   Examples:
     |  reptile    |
     | crocodile   |
-    | TURTLETURLE |
-    | NEWVIPER    |
+    | N-E-W-V-I-P |
+    | T-U-R-T-U-R |
 
