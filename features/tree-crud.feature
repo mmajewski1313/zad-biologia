@@ -40,7 +40,7 @@ Feature: I would like to edit tree
     And I press "Update"
     And I follow "Back to the list"
     Then I should see "<new-tree>"
-    And I should see "<new-height"
+    And I should see "<new-height>"
     And I should not see "<old-tree>"
 
   Examples:
@@ -63,8 +63,7 @@ Feature: I would like to edit tree
     Then I should not see "<tree>"
 
   Examples:
-    |  tree       |
-    | hornbeam    |
+    |  tree       |   
     | plumtree    |
     | spruce      |
 
