@@ -5,7 +5,7 @@ namespace AppBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Reptile
+ * Crustacean
  *
  * @ORM\Table()
  * @ORM\Entity

@@ -161,7 +161,7 @@ class CrustaceanController extends Controller
     private function createEditForm(Crustacean $entity)
     {
         $form = $this->createForm(new CrustaceanType(), $entity, array(
-            'action' => $this->generateUrl('admin_reptile_update', array('id' => $entity->getId())),
+            'action' => $this->generateUrl('admin_crustacean_update', array('id' => $entity->getId())),
             'method' => 'PUT',
         ));
 
