@@ -16,6 +16,11 @@ Feature: I would like to edit insects
     Then I should see "<insects>"
      And I should see "<age>"
 
+Examples:
+    | insects     | age |
+    | viper       | 15  |
+    | turtle      | 190 |
+    | crocodile   | 70  |
 
   Scenario Outline: Edit records
    Given I am on homepage
@@ -35,8 +40,9 @@ Feature: I would like to edit insects
     Then I should see "<new-insects>"
      And I should see "<new-age>"
      And I should not see "<old-insects>"
-
-  
+Examples:
+    | old-insects     | new-reptile  | new-age    |
+   
 
 
   Scenario Outline: Delete records
@@ -52,4 +58,7 @@ Feature: I would like to edit insects
     When I press "Delete"
     Then I should not see "<insects>"
 
-  
+   Examples:
+    |  insects    |
+    | crocodile   |
+ 
