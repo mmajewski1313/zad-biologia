@@ -6,21 +6,21 @@ Feature: I would like to edit reptiles
     And I fill in "Username" with "admin"
     And I fill in "Password" with "loremipsum"
     And I press "Login"
-    And I go to "/admin/cats/"
-    Then I should not see "<cats>"
+    And I go to "/admin/Snail/"
+    Then I should not see "<Snail>"
     And I follow "Create a new entry"
-    Then I should see "Cats creation"
-    When I fill in "Name" with "<cats>"
+    Then I should see "Snail creation"
+    When I fill in "Name" with "<Snail>"
     And I fill in "Lifespan" with "<lifespan>"
     And I press "Create"
-    Then I should see "<cats>"
+    Then I should see "<Snail>"
     And I should see "<lifespan>"
 
   Examples:
-    | cats     | lifespan |
-    | lion     | 27  |
-    | cheetah  | 23  |
-    | lynx     | 15  |
+    | Snail             | lifespan |
+    | Limax maximus     | 1 |
+    | Daudebardia rufa  | 1 |
+    | Deroceras rodnae  | 1 |
 
 
 
@@ -30,23 +30,23 @@ Feature: I would like to edit reptiles
     And I fill in "Username" with "admin"
     And I fill in "Password" with "loremipsum"
     And I press "Login"
-    And I go to "/admin/cats/"
-    Then I should not see "<new-cats>"
-    When I follow "<old-cats>"
-    Then I should see "<old-cats>"
+    And I go to "/admin/Snail/"
+    Then I should not see "<new-Snail>"
+    When I follow "<old-Snail>"
+    Then I should see "<old-Snail>"
     When I follow "Edit"
-    And I fill in "Name" with "<new-cats>"
+    And I fill in "Name" with "<new-Snail>" 
     And I fill in "Lifespan" with "<new-lifespan>"
     And I press "Update"
     And I follow "Back to the list"
-    Then I should see "<new-cats>"
+    Then I should see "<new-Snail>"
     And I should see "<new-lifespan>"
-    And I should not see "<old-cats>"
+    And I should not see "<old-Snail>
 
   Examples:
-    | old-cats     | new-cats          | new-lifespan    |
-    | lion         | puma              | 12              |
-    | cheetah      | tiger             | 15              |
+    | old-Snail           | new-Snail                   | new-lifespan |
+    | Limax maximus       | Limax cinereoniger          | 1 |
+    | Daudebardia rufa    | Perforatella incarnata      | 1 |
 
 
   Scenario Outline: Delete records
@@ -55,15 +55,14 @@ Feature: I would like to edit reptiles
     And I fill in "Username" with "admin"
     And I fill in "Password" with "loremipsum"
     And I press "Login"
-    And I go to "/admin/cats/"
-    Then I should see "<cats>"
-    When I follow "<cats>"
-    Then I should see "<cats>"
+    And I go to "/admin/Snail/"
+    Then I should see "<Snail>"
+    When I follow "<Snail>"
+    Then I should see "<Snail>""
     When I press "Delete"
-    Then I should not see "<cats>"
+    Then I should not see "<Snail>""
 
   Examples:
-    |  cats     |
-    | puma      |
-    | tiger     |
-
+    |  Snail |
+    | Limax cinereoniger       |
+    | Perforatella incarnata    |
