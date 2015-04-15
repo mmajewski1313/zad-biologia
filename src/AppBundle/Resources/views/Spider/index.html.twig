@@ -16,7 +16,11 @@
         {% for entity in entities %}
             <tr>
                 <td><a href="{{ path('admin_spider_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
-                <td>{{ entity.name }}</td>
+                <td>
+                  <a href="{{ path('admin_spider_show', { 'id': entity.id }) }}">
+                    {{ entity.name }}
+                  </a>
+                </td>
                 <td>{{ entity.legspan }}</td>
                 <td>
                 <ul>
