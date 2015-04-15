@@ -6,8 +6,8 @@ Feature: I would like to edit reptiles
     And I fill in "Username" with "admin"
     And I fill in "Password" with "loremipsum"
     And I press "Login"
-    And I go to "/admin/Snail/"
-    Then I should not see "<Snail>"
+    And I go to "/admin/snail/"
+    Then I should not see "<snail>"
     And I follow "Create a new entry"
     Then I should see "Snail creation"
     When I fill in "Name" with "<Snail>"
@@ -18,9 +18,7 @@ Feature: I would like to edit reptiles
 
   Examples:
     | Snail             | lifespan |
-    | Limax maximus     | 1 |
-    | Daudebardia rufa  | 1 |
-    | Deroceras rodnae  | 1 |
+
 
 
 
@@ -44,9 +42,7 @@ Feature: I would like to edit reptiles
     And I should not see "<old-Snail>
 
   Examples:
-    | old-Snail           | new-Snail                   | new-lifespan |
-    | Limax maximus       | Limax cinereoniger          | 1 |
-    | Daudebardia rufa    | Perforatella incarnata      | 1 |
+    | old-Snail            | new-Snail                | new-lifespan |
 
 
   Scenario Outline: Delete records
@@ -63,6 +59,4 @@ Feature: I would like to edit reptiles
     Then I should not see "<Snail>""
 
   Examples:
-    |  Snail |
-    | Limax cinereoniger       |
-    | Perforatella incarnata    |
+    |  Snail|
