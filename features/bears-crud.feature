@@ -36,7 +36,7 @@ Feature: I would like to edit bears
     Then I should see "<old-bears>"
     When I follow "Edit"
     And I fill in "Name" with "<new-bears>"
-    And I fill in "Capture" with "<new-weight>"
+    And I fill in "Weight" with "<new-weight>"
     And I press "Update"
     And I follow "Back to the list"
     Then I should see "<new-bears>"
