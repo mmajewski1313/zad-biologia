@@ -1,4 +1,4 @@
-Feature: I would like to edit crustaceans
+Feature: I would like to edit viruses
 
   Scenario Outline: Insert records
     Given I am on homepage
@@ -6,21 +6,21 @@ Feature: I would like to edit crustaceans
     And I fill in "Username" with "admin"
     And I fill in "Password" with "loremipsum"
     And I press "Login"
-    And I go to "/admin/crustacean/"
-    Then I should not see "<crustacean>"
+    And I go to "/admin/viruses/"
+    Then I should not see "<viruses>"
     And I follow "Create a new entry"
-    Then I should see "Crustacean creation"
-    When I fill in "Name" with "<crustacean>"
-    And I fill in "Capture" with "<capture>"
+    Then I should see "Viruses creation"
+    When I fill in "Name" with "<viruses>"
+    And I fill in "Capture" with "<size>"
     And I press "Create"
-    Then I should see "<crustacean>"
-    And I should see "<capture>"
+    Then I should see "<viruses>"
+    And I should see "<size>"
 
   Examples:
-    | crustacean     | capture |
-    | shrimp         | 3500    |
-    | crab           | 1400    |
-    | lobster        | 280     |
+    | viruses     | size |
+    | Ebola         | 1    |
+    | HIV           | 2    |
+    | Echo        | 3     |
 
 
 
@@ -30,23 +30,23 @@ Feature: I would like to edit crustaceans
     And I fill in "Username" with "admin"
     And I fill in "Password" with "loremipsum"
     And I press "Login"
-    And I go to "/admin/crustacean/"
-    Then I should not see "<new-crustacean>"
-    When I follow "<old-crustacean>"
-    Then I should see "<old-crustacean>"
+    And I go to "/admin/viruses/"
+    Then I should not see "<new-viruses>"
+    When I follow "<old-viruses>"
+    Then I should see "<old-viruses>"
     When I follow "Edit"
-    And I fill in "Name" with "<new-crustacean>"
-    And I fill in "Capture" with "<new-capture>"
+    And I fill in "Name" with "<new-viruses>"
+    And I fill in "Capture" with "<new-size>"
     And I press "Update"
     And I follow "Back to the list"
-    Then I should see "<new-crustacean>"
-    And I should see "<new-capture>"
-    And I should not see "<old-crustacean>"
+    Then I should see "<new-viruses>"
+    And I should see "<new-size>"
+    And I should not see "<old-viruses>"
 
   Examples:
-    | old-crustacean  | new-crustacean    | new-capture |
-    | shrimp          | krill             | 125         |
-    | lobster         | crayfish          | 540         |
+    | old-viruses  | new-viruses    | new-size |
+    | Ebola          | Hendra             | 4        |
+    | HIV          | Junin          | 5         |
 
 
   Scenario Outline: Delete records
@@ -55,16 +55,16 @@ Feature: I would like to edit crustaceans
     And I fill in "Username" with "admin"
     And I fill in "Password" with "loremipsum"
     And I press "Login"
-    And I go to "/admin/crustacean/"
-    Then I should see "<crustacean>"
-    When I follow "<crustacean>"
-    Then I should see "<crustacean>"
+    And I go to "/admin/viruses/"
+    Then I should see "<viruses>"
+    When I follow "<viruses>"
+    Then I should see "<viruses>"
     When I press "Delete"
-    Then I should not see "<crustacean>"
+    Then I should not see "<viruses>"
 
   Examples:
     |  crustacean |
-    | krill       |
-    | crab        |
-    | crayfish    |
+    | ABC       |
+    | BCA        |
+    | CBA    |
 
