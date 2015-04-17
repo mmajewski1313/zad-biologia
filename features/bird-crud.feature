@@ -20,7 +20,7 @@ Feature: I would like to edit birds
     | birds     | weight |
     | dusky     | 155    |
     | rainbow   | 130    |
-    | red       | 170    |
+    | maleo     | 170    |
 
 
 
@@ -64,7 +64,7 @@ Feature: I would like to edit birds
 
   Examples:
     |  birds    |
-    | red       |
+    | maleo     |
     | canary    |
     | kea       |
 
