@@ -17,10 +17,10 @@ Feature: I would like to edit flower
      And I should see "<height>"
 
   Examples:
-    | flower     | height |
-    | rose       | 6      |
-    | iris       | 15     |
-    | lilium     | 3      |
+    | flower         | height |
+    | rose           | 6      |
+    | iris           | 15     |
+    | lilium         | 3      |
 
 
 
@@ -32,7 +32,7 @@ Feature: I would like to edit flower
      And I press "Login"
      And I go to "/admin/flower/"
     Then I should not see "<new-flower>"
-    When I follow "<old-flower"
+    When I follow "<old-flower>"
     Then I should see "<old-flower>"
     When I follow "Edit"
      And I fill in "Name" with "<new-flower>"
@@ -63,7 +63,7 @@ Feature: I would like to edit flower
     Then I should not see "<flower>"
 
   Examples:
-    |  flower   |
-    | lilium    |
-    | tulip     |
-    | bellis    |
+    |  flower      |
+    | lilium       |
+    | tulip        |
+    | bellis       |
