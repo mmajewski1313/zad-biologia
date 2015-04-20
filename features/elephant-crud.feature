@@ -44,9 +44,9 @@ Feature: I would like to edit elephant
     And I should not see "<old-elephant>"
 
   Examples:
-    | old-elephant | new-elephant | new-weight |
-    | afrykanski   | Afrykanski   | 4800       |
-    | lesny        | Lesny        | 4900       |
+    | old-elephant | new-elephant        | new-weight |
+    | afrykanski   | A-F-R-Y-K-A-N-S-K-I | 4800       |
+    | lesny        | L-E-S-N-Y           | 4900       |
 
 
   Scenario Outline: Delete records
@@ -63,8 +63,8 @@ Feature: I would like to edit elephant
     Then I should not see "<elephant>"
 
   Examples:
-    |  elephant  |
-    | Afrykanski |
-    | Lesny      |
-    | indyjski   |
+    |  elephant           |
+    | A-F-R-Y-K-A-N-S-K-I |
+    | L-E-S-N-Y           |
+    | indyjski            |
 
