@@ -34,7 +34,7 @@ Examples:
     Then I should see "<old-malacostraca>"
     When I follow "Edit"
      And I fill in "Name" with "<new-malacostraca>"
-     And I fill in "Age" with "<new-malacostraca>"
+     And I fill in "Age" with "<new-age>"
      And I press "Update"
      And I follow "Back to the list"
     Then I should see "<new-malacostraca>"
