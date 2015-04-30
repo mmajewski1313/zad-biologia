@@ -63,7 +63,7 @@ Feature: I would like to edit dog
     Then I should not see "<dog>"
 
   Examples:
-    |  elephant           |
+    |  dog                |
     | L-A-B-R-A-D-O-R     |
     | H-U-S-K-Y           |
     | cocer-spaniel       |
