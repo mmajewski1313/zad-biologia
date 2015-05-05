@@ -64,7 +64,7 @@ Feature: I would like to edit bull
 
   Examples:
     |bull       |
-    |simental   |
-    |galloway   |
     |highland   |
+    |hereford   |
+    |piemontese |
 
