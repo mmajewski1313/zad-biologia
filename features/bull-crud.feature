@@ -66,5 +66,5 @@ Feature: I would like to edit bull
     |bull       |
     |highland   |
     |hereford   |
-    |piemontese |
+    |angus      |
 
