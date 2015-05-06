@@ -1,3 +1,5 @@
+Feature: I would like to edit beavers
+
 Scenario Outline: Insert records
    Given I am on homepage
      And I follow "Login"
@@ -16,9 +18,9 @@ Scenario Outline: Insert records
 
   Examples:
     | beaver     | age |
-    | viper       | 15  |
-    | turtle      | 190 |
-    | crocodile   | 70  |
+    | bob        | 15  |
+    | nick       | 190 |
+    | joe        | 70  |
 
 
 
@@ -42,9 +44,9 @@ Scenario Outline: Insert records
      And I should not see "<old-beaver>"
 
   Examples:
-    | old-beaver     | new-beaver  | new-age    |
-    | viper           | N-E-W-V-I-P       | 9876       |
-    | turtle          | T-U-R-T-U-R       | 3333       |
+    | old-beaver      | new-beaver        | new-age    |
+    | bob             | N-E-W-B-O-B       | 9876       |
+    | nick            | N-E-W-N-I-C-K     | 3333       |
 
 
   Scenario Outline: Delete records
@@ -61,7 +63,7 @@ Scenario Outline: Insert records
     Then I should not see "<beaver>"
 
   Examples:
-    |  beaver    |
-    | crocodile   |
-    | N-E-W-V-I-P |
-    | T-U-R-T-U-R |
+    |  beaver        |
+    | N-E-W-B-O-B    |
+    | N-E-W-N-I-C-K  |
+    | joe            |
