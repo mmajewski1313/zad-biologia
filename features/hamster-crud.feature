@@ -66,6 +66,6 @@ Examples:
 
   Examples:
     |  hamster     |
-    |	bolek      |
+    |	ATOMEK     |
     |   ZIOMEK     |
 
